@@ -1,0 +1,31 @@
+/* RESET DE CONFIGURAÇÕES GERAIS PARA NAVEAGDOR */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    background-image: url("assets/snopp-dog.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+H1 {
+    color: #0f0cca;
+    font-size:200PX;
+    text-align: center;
+    margin: 20px 0;
+}
+
+P{
+    text-align: justify;
+    font-size: 20px;
+    margin: 20px;
+    font-family: papyrus, sans-serif;
+    color: aquamarine;
+}
