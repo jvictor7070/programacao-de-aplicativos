@@ -9,7 +9,7 @@
 body{
     background-color: #ffffff;
     font-family: Arial, sans-serif;
-    background-image: url("assets/snopp-dog.jpg");
+    background-image: url("assets/santuario.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -17,7 +17,7 @@ body{
 }
 H1 {
     color: #0f0cca;
-    font-size:200PX;
+    font-size:100PX;
     text-align: center;
     margin: 20px 0;
 }
@@ -27,5 +27,67 @@ P{
     font-size: 20px;
     margin: 20px;
     font-family: papyrus, sans-serif;
-    color: aquamarine;
+    color: rgb(255, 255, 255);
+}
+
+hr{
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+button{
+    background-color: #ffffff80;
+    display: block;
+    height: auto;
+    margin: 7px auto;
+    padding: 2px;
+    border-radius: 6px; /*arrendonda as bordas */
+    text-decoration: none;
+}
+
+a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: 50px auto;
+    color: brown;
+    font-size: 25px;
+}
+
+img{
+    margin: 7px auto;
+    display: block;
+    text-align: center;
+    max-width: 600px;
+}
+
+input-group{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+input[type="text"]{
+    margin: 0px auto;
+    text-align: center;
+    border-radius: 3px;
+    display: block;
+    
+}
+
+li{
+    font-size: 25px;
+    color: #000000;
+    text-align: center;
+    margin: 5px 0;
+}
+
+h3{
+    color: #020096;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0;
 }
