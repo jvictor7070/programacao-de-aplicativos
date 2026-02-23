@@ -1,93 +1,48 @@
-/* RESET DE CONFIGURAÇÕES GERAIS PARA NAVEAGDOR */
-
-*{
+/* RESET DAS CONFIGURAÇÕES DE NAVEGADOR */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: #ffffff;
-    font-family: Arial, sans-serif;
-    background-image: url("assets/santuario.png");
+body {
+    background-color: #5548;
+    background-image: url("assets/yuyu.jpg");
+
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center - center;
     background-size: cover;
     background-attachment: fixed;
 }
-H1 {
-    color: #0f0cca;
-    font-size:100PX;
+
+h2 {
     text-align: center;
-    margin: 20px 0;
+    font-size: 60px;
+    font-family: "Gigi";
 }
 
-P{
-    text-align: justify;
+p {
+    text-align: center;
     font-size: 20px;
-    margin: 20px;
-    font-family: papyrus, sans-serif;
-    color: rgb(255, 255, 255);
+    margin: 50px 20px;
 }
 
-hr{
-    max-width: 50%;
-    margin: 0 auto;
-}
-
-button{
-    background-color: #ffffff80;
-    display: block;
-    height: auto;
-    margin: 7px auto;
-    padding: 2px;
-    border-radius: 6px; /*arrendonda as bordas */
-    text-decoration: none;
-}
-
-a{
+a {
     display: block;
     text-align: center;
     text-decoration: none;
-    margin: 50px auto;
-    color: brown;
-    font-size: 25px;
 }
 
-img{
-    margin: 7px auto;
+img {
     display: block;
-    text-align: center;
-    max-width: 600px;
+    max-width: 300px;
+    margin: 10px auto;
 }
 
-input-group{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-    width: 100%;
-}
-
-input[type="text"]{
-    margin: 0px auto;
-    text-align: center;
-    border-radius: 3px;
+button {
     display: block;
-    
-}
-
-li{
-    font-size: 25px;
-    color: #000000;
-    text-align: center;
-    margin: 5px 0;
-}
-
-h3{
-    color: #020096;
-    font-size: 30px;
-    text-align: center;
-    margin: 20px 0;
+    margin: 20px auto;
+    padding: 5px 30px;
+    border-radius: 30px;
+    cursor: pointer;
 }
