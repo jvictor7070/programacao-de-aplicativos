@@ -10,7 +10,8 @@ const listaDeUsuarios = [
     {nome: "Ana",idade: 25},
     {nome: "Maria",idade: 35},
     {nome: "Joana",idade: 45},
-    {nome: "José",idade: 15}
+    {nome: "José",idade: 15},
+    {nome: "Carla",idade: 45}
 
 ]
 
@@ -48,3 +49,17 @@ numerosPares.forEach(numero =>
 console.log("\nna lista de nomes, mostre todos os nomes com forEach")
 listaDeNomes.forEach(nome => 
     console.log(`${nome}`))
+
+console.log("\nna lista de usuários, mostre todos os nomes")
+const nomes = listaDeUsuarios.map(u => u.nome)
+nomes.forEach(nome => console.log(`Nome: ${nome}`))
+
+console.log("\nNa lista de usuários, encontre um usuário.")
+const usuarioEncontrado = listaDeUsuarios.find(u => u.nome === "Ana")
+console.log(`Usuário encontrado`)
+console.log(`Nome: ${usuarioEncontrado.nome}, \nIdade: ${usuarioEncontrado.idade} anos`)
+
+console.log("\nNa lista de usuários, encontre um usuário com idade de 45 anos.")
+const usuario45 = listaDeUsuarios.find(u => u.idade === 45)
+console.log(`Usuário encontrado`)
+console.log(`Nome: ${usuario45.nome}, \nIdade: ${usuario45.idade} anos`)
