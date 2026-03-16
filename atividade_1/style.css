@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;700&family=Noto+Sans+JP:wght@900&display=swap');
+
+:root {
+    /* Cores Oficiais do Universo DBZ */
+    --goku-orange: #ff5e00;
+    --goku-blue: #0b1c3c;
+    --ssj-gold: #ffe100;
+    --shenlong-green: #2ecc71;
+    --ki-aura: rgba(255, 225, 0, 0.5);
+    --text-light: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--goku-blue);
+    /* Fundo simulando a velocidade de voo / ki emanando */
+    background-image: radial-gradient(circle at 50% 50%, #1a3668 0%, var(--goku-blue) 80%);
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+/* 🐉 O SÍMBOLO DO GOKU (悟) NO TOPO 🐉 */
+body::before {
+    content: "悟"; /* Kanji que significa "Sabedoria/Iluminação" usado pelo Goku */
+    font-family: 'Noto Sans JP', sans-serif;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--text-light);
+    color: #000;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    font-size: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* As bordas clássicas do símbolo no kimono */
+    border: 4px solid var(--text-light);
+    box-shadow: 
+        0 0 0 6px var(--goku-orange),
+        0 0 0 10px var(--text-light),
+        0 0 30px var(--ki-aura);
+    z-index: 10;
+    animation: floatAura 3s ease-in-out infinite;
+}
+
+/* Animação do símbolo flutuando com aura */
+@keyframes floatAura {
+    0%, 100% { transform: translate(-50%, 0) scale(1); box-shadow: 0 0 0 6px var(--goku-orange), 0 0 0 10px var(--text-light), 0 0 20px var(--ki-aura); }
+    50% { transform: translate(-50%, -5px) scale(1.05); box-shadow: 0 0 0 6px var(--goku-orange), 0 0 0 10px var(--text-light), 0 0 40px var(--ssj-gold); }
+}
+
+/* O Ringue do Torneio de Artes Marciais (Container) */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 3rem 2.5rem 2.5rem; /* Mais espaço no topo para não bater no símbolo */
+    margin-top: 60px; /* Desce o container para acomodar o Kanji */
+    border-radius: 12px;
+    border: 4px solid var(--goku-orange);
+    box-shadow: 
+        inset 0 0 20px rgba(255, 94, 0, 0.3),
+        0 10px 30px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 380px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Título */
+h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 2.2rem;
+    color: var(--ssj-gold);
+    text-shadow: 2px 2px 0px var(--goku-orange), 4px 4px 0px #000;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--ssj-gold);
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* Input (O Rastreador / Scouter) */
+input[type="number"] {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--ssj-gold);
+    border-radius: 6px;
+    color: var(--shenlong-green); /* Números verdes como a tela de um scouter */
+    padding: 12px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    outline: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+input[type="number"]:focus {
+    border-color: var(--shenlong-green);
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.5);
+}
+
+/* Botão: Elevar o Ki! */
+#btnGerar {
+    font-family: 'Bangers', cursive;
+    background-color: var(--goku-orange);
+    color: var(--text-light);
+    border: 3px solid #fff;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px #000;
+    transition: all 0.3s;
+}
+
+/* Efeito Super Saiyajin no Hover */
+#btnGerar:hover {
+    background-color: var(--ssj-gold);
+    color: #000;
+    border-color: var(--goku-orange);
+    text-shadow: none;
+    box-shadow: 0 0 20px var(--ssj-gold), inset 0 0 10px #fff;
+    transform: scale(1.05);
+}
+
+#btnGerar:active {
+    transform: scale(0.95);
+}
+
+/* Área de Resultado */
+#ResultadoTabuada {
+    margin-top: 20px;
+    text-align: center;
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#ResultadoTabuada h2 {
+    font-family: 'Bangers', cursive;
+    color: var(--text-light);
+    text-shadow: 1px 1px 0px var(--goku-orange);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Linhas da Tabuada (Golpes) */
+#ResultadoTabuada p {
+    background: rgba(255, 94, 0, 0.15);
+    color: var(--ssj-gold);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 6px 0;
+    border-left: 5px solid var(--goku-orange);
+    text-shadow: 1px 1px 2px #000;
+    animation: punchIn 0.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Erro (Dano recebido) */
+#ResultadoTabuada p:first-child:last-child {
+    border-left-color: #ff0000;
+    color: #ff4444;
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Animação agressiva simulando socos rápidos */
+@keyframes punchIn {
+    0% { opacity: 0; transform: scale(1.5) translateX(20px); }
+    100% { opacity: 1; transform: scale(1) translateX(0); }
+}
+
+/* Scrollbar do Torneio */
+#ResultadoTabuada::-webkit-scrollbar { width: 8px; }
+#ResultadoTabuada::-webkit-scrollbar-thumb {
+    background: var(--goku-orange);
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
