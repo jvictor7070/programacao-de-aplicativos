@@ -1,0 +1,136 @@
+/* Importando fontes com aspecto mais rústico e amigável */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Nunito:wght@400;700&display=swap');
+
+:root {
+    /* Paleta de Cores da Natureza */
+    --forest-dark: #081c15;    /* Verde bem escuro (fundo) */
+    --tree-green: #2d6a4f;     /* Verde folha (botões e detalhes) */
+    --leaf-light: #52b788;     /* Verde claro (brilhos e hovers) */
+    --wood-brown: #5c4033;     /* Marrom madeira (textos de resultado) */
+    --card-bg: #e8f5e9;        /* Verde bem clarinho para o fundo do cartão */
+    --text-dark: #1b4332;      /* Verde escuro para leitura */
+}
+
+body {
+    background-color: var(--forest-dark);
+    /* Um gradiente que simula a luz do sol passando por cima das árvores */
+    background-image: radial-gradient(circle at top right, #1b4332, var(--forest-dark));
+    color: var(--text-dark);
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* O Painel Principal */
+.conteiner {
+    background-color: var(--card-bg);
+    padding: 30px 40px;
+    border-radius: 16px;
+    /* Uma sombra suave e uma borda verde claro no topo para dar destaque */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    border-top: 6px solid var(--leaf-light);
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+}
+
+/* 🌳 O LOGOTIPO SVG 🌳 */
+.conteiner::before {
+    content: ""; /* Deixamos vazio para inserir a imagem no fundo */
+    display: block;
+    width: 100%;
+    height: 70px; /* Você pode aumentar ou diminuir esse valor para ajustar o tamanho da sua logo */
+    background-image: url('assets/701968.svg');
+    background-size: contain; /* Faz a logo caber perfeitamente sem cortar */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px dashed var(--leaf-light); /* Linha divisória charmosa */
+}
+
+/* Título Secundário */
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--tree-green);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 700;
+    color: var(--tree-green);
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+/* Campos de Digitação */
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #b7e4c7; /* Borda cor de folha nova */
+    border-radius: 8px;
+    background-color: #fff;
+    color: var(--text-dark);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box; /* Evita que o input vaze do container */
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--tree-green);
+    box-shadow: 0 0 8px rgba(82, 183, 136, 0.5); /* Brilho verde ao clicar */
+}
+
+/* Botão de Ação */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--tree-green);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: var(--leaf-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Área de Resultado */
+#resultadoTabuada {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#resultadoTabuada p {
+    background-color: rgba(45, 106, 79, 0.1);
+    color: var(--wood-brown); /* Cor de madeira para o resultado */
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-left: 4px solid var(--tree-green);
+}
