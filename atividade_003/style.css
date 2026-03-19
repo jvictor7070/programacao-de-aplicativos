@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff5ed; /* Fundo levemente alaranjado muito claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.15); /* Sombra suave em tom laranja */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border-top: 8px solid #ff8c00; /* Detalhe vibrante no topo */
+}
+
+.logo {
+    width: 80px;         /* Tamanho da logo */
+    height: 80px;        /* Mesma altura para ficar um círculo perfeito */
+    margin-bottom: 20px;
+    border-radius: 50%;  /* Deixa a imagem redonda */
+    object-fit: cover;   /* Faz a imagem preencher o círculo sem esticar */
+    border: 3px solid #ff8c00; /* Uma bordinha laranja para combinar com o tema */
+    box-shadow: 0 4px 10px rgba(255, 140, 0, 0.3);
+}
+
+h1 {
+    color: #333;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus {
+    border-color: #ff8c00;
+    background-color: #fff9f2;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff8c00; /* Laranja Vibrante */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    box-shadow: 0 4px 15px rgba(241, 146, 29, 0.3);
+}
+
+button:hover {
+    background-color: #e67e00;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#resultado {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    min-height: 80px;
+}
+
+/* Cores de status dinâmicas */
+.aprovado {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.reprovado {
+    color: #e74c3c;
+    font-weight: bold;
+}
