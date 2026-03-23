@@ -1,5 +1,5 @@
 function calcularIdade() {
-    const anoNascimento = document.getElementById('ano_nascimento').value;
+    const anoNascimento = parseInt(document.getElementById('ano_nascimento').value);
 
     resultado ="";
 
@@ -24,5 +24,10 @@ function calcularIdade() {
             resultado = "Ano de nascimento inválido.";
     }
 
-    document.getElementById('resultado').textContent = resultado;
+    document.getElementById('resultado').innerHTML = `
+        Idade: ${idade} anos. <br/>
+        Resultado: ${resultado}
+    `;
 }
+
+document.getElementById('btnVotar').addEventListener('click', calcularIdade);
