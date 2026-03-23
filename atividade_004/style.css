@@ -1,131 +1,88 @@
-/* Importando fontes: uma de impacto (Roboto Black) e uma "suja/agressiva" (Permanent Marker) */
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
 
 body {
-    /* Fundo escuro com uma leve textura de concreto ou arena */
-    background-color: #050505;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-                      url('https://images.alphacoders.com/115/1154564.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: #0c1a2b; /* Azul escuro inspirado no logo do anime */
+    color: #fff;
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #eeeeee;
+    margin: 0;
+}
+img.logomarca {
+    width: 150px;
+    margin-bottom: 20px;
+    margin: 0 auto;
 }
 
 .container {
-    /* Background semi-transparente estilo "Dark Mode" */
-    background: rgba(15, 15, 15, 0.9);
-    padding: 40px;
-    border-radius: 4px; /* Bordas retas passam mais seriedade/força */
-    border: 2px solid #ff0000;
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.3), inset 0 0 10px rgba(255, 0, 0, 0.2);
-    width: 100%;
-    max-width: 380px;
+    background: #f4f4f4;
+    color: #222;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     text-align: center;
-    position: relative;
-}
-
-/* Estilização da Logo centralizada */
-.logo {
-    display: block;
-    margin: 0 auto 20px;
-    width: 180px; /* Baki logos costumam ser horizontais */
-    height: auto;
-    filter: drop-shadow(0 0 8px #ff0000);
-    transition: transform 0.3s ease;
-}
-
-.logo:hover {
-    transform: scale(1.1) rotate(-2deg);
+    width: 350px;
+    border: 5px solid #d91b1b; /* Vermelho Ringue */
 }
 
 h1 {
-    font-family: 'Permanent Marker', cursive;
-    color: #ff0000;
-    font-size: 36px;
+    font-family: 'Bebas+Neue', sans-serif;
+    font-size: 3rem;
+    color: #0a4da2;
+    margin-bottom: 10px;
     text-transform: uppercase;
-    margin-bottom: 25px;
-    text-shadow: 3px 3px 0px #4a0000;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 10px;
+    /* Adicione uma URL de imagem do Ippo aqui */
 }
 
 label {
     display: block;
-    text-align: left;
-    color: #888;
-    font-size: 13px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 input {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    background: #111;
-    border: 1px solid #333;
-    border-left: 6px solid #ff0000; /* Detalhe "assinatura" do tema */
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    outline: none;
-    transition: 0.2s;
-}
-
-input:focus {
-    border-color: #ff0000;
-    background: #1a0000;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #0a4da2;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
 }
 
 button {
-    width: 100%;
-    padding: 16px;
-    background-color: #ff0000;
-    color: #fff;
+    background-color: #d91b1b;
+    color: white;
     border: none;
-    font-family: 'Permanent Marker', cursive;
-    font-size: 20px;
-    text-transform: uppercase;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-family: 'Bebas+Neue', sans-serif;
     cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 5px 0 #800000;
-    margin-top: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+    width: 100%;
+    letter-spacing: 1px;
 }
 
 button:hover {
-    background-color: #e60000;
-    transform: translateY(-2px);
-    box-shadow: 0 7px 0 #600000;
-}
-
-button:active {
-    transform: translateY(3px);
-    box-shadow: 0 2px 0 #600000;
+    background-color: #a81515;
+    transform: scale(1.05);
 }
 
 #resultado {
-    margin-top: 30px;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 4px;
-    font-size: 18px;
-    line-height: 1.6;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-/* Classes para o JavaScript aplicar dinamicamente */
-.voto-obrigatorio { color: #ff0000; font-weight: 900; text-decoration: underline; }
-.voto-opcional { color: #ffcc00; }
-.voto-proibido { color: #666; font-style: italic; }
+/* Cores para o status do voto */
+.status-obrigatorio { color: #d91b1b; }
+.status-opcional { color: #0a4da2; }
+.status-proibido { color: #555; }
