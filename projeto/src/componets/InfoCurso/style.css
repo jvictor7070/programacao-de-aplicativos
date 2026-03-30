@@ -1,0 +1,90 @@
+/* Importando uma fonte de terminal pixelado */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.info-curso {
+  --primary-color: #00ff41; /* Verde Matrix */
+  --bg-color: #0a0a0a;
+  --accent-color: #ff00ff; /* Rosa Choque */
+  
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  padding: 25px;
+  width: 320px;
+  font-family: 'VT323', monospace;
+  position: relative;
+  overflow: hidden;
+  
+  /* Borda estilo "Corner Pixel" (Cantos chanfrados) */
+  border: 4px solid var(--primary-color);
+  clip-path: polygon(
+    0 8px, 8px 8px, 8px 0, 
+    calc(100% - 8px) 0, calc(100% - 8px) 8px, 100% 8px, 
+    100% calc(100% - 8px), calc(100% - 8px) calc(100% - 8px), calc(100% - 8px) 100%, 
+    8px 100%, 8px calc(100% - 8px), 0 calc(100% - 8px)
+  );
+
+  transition: all 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.info-aluno h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-top: 0;
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+.info-aluno p {
+  font-size: 20px;
+  margin: 15px 0;
+  border-left: 4px solid transparent;
+  padding-left: 10px;
+}
+
+.info-aluno strong {
+  color: var(--accent-color);
+}
+
+/* --- Efeitos de Passar o Mouse (Hover) --- */
+
+.info-aluno:hover {
+  transform: translateY(-8px) rotate(1deg);
+  border-color: var(--accent-color);
+  box-shadow: 10px 10px 0px #333;
+}
+
+/* Criando o efeito de Scanline (Linhas de TV) no Hover */
+.info-aluno::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg, 
+    rgba(255, 0, 0, 0.06), 
+    rgba(0, 255, 0, 0.02), 
+    rgba(0, 0, 255, 0.06)
+  );
+  background-size: 100% 4px, 3px 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.info-aluno:hover::before {
+  opacity: 1;
+}
+
+/* Animação simples para o texto do curso */
+.info-aluno:hover p:last-child {
+  border-left: 4px solid var(--accent-color);
+  animation: blink 0.4s infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
