@@ -1,0 +1,30 @@
+/* Estilo Base do Rodapé - Traje Kakaroto */
+.footer {
+    background-color: #f26522; /* Laranja clássico do Gi */
+    color: #ffffff; /* Texto branco para dar foco e leitura perfeita */
+    text-align: center;
+    padding: 25px 15px;
+    border-top: 8px solid #0b3d91; /* Azul da camisa de baixo e munhequeiras */
+    box-shadow: 0 -5px 15px rgba(242, 101, 34, 0.3); /* Leve aura ao redor do rodapé */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Propriedades úteis caso a página toda use display flex */
+    width: 100%;
+    margin-top: auto; 
+}
+
+/* Estilo do Texto */
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 2px 2px 4px rgba(92, 14, 14, 0.4); /* Sombra para dar destaque como nos animes */
+}
+
+/* Efeito sutil ao passar o mouse (Aura do Kaioken) */
+.footer:hover {
+    box-shadow: 0 -5px 25px rgba(255, 51, 0, 0.6); 
+    transition: box-shadow 0.3s ease-in-out;
+}

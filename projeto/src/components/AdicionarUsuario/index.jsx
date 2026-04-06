@@ -2,9 +2,9 @@ import { useState } from "react";
 import './style.css'
 
 export default function AdicionarUsuario() {
-    const [nome, setNome] = useStates('')
-    const [email, setEmail] = useStates('')
-    const [listaDeUsuarios, setListaDeUsuarios] = useStates([])
+    const [nome, setNome] = useState('')
+    const [email, setEmail] = useState('')
+    const [listaDeUsuarios, setListaDeUsuarios] = useState([])
 
     const handlerAdicionarUsuario = (event) => {
         // Evitando que página recarregue ao mudar algum elemento na página. 
@@ -19,7 +19,7 @@ export default function AdicionarUsuario() {
         }
     }
 
-    return(
+    return (
         // Criando Html da página
         <div className='formulario'>
             <h2>Adicionar usuário</h2> 
@@ -27,6 +27,7 @@ export default function AdicionarUsuario() {
                 <input
                 type="text"
                 value={nome}
+                placeholder="Nome"
                 onChange={(e) => setNome(e.target.value)}
                 />
                 <input
@@ -37,6 +38,7 @@ export default function AdicionarUsuario() {
                 />
                 <button type="submit">Adicionar</button>
                 </form>
+
                 <hr />
 
                 <h2>Usuários Adicionados</h2>

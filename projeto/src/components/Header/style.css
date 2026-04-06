@@ -1,0 +1,31 @@
+/* Estilo do Cabeçalho - Traje do Gon */
+.header {
+    background-color: #2b7a3e; /* Verde floresta clássico da jaqueta do Gon */
+    color: #ffffff;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 6px solid #ff5a00; /* Laranja vibrante dos contornos e bolsos da jaqueta */
+    box-shadow: 0 4px 12px rgba(43, 122, 62, 0.4); /* Sombra verde leve para dar profundidade */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo da Logo / Texto Central */
+.header div {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0px #111111; /* Sombra escura forte remetendo aos traços marcantes do anime e ao cabelo dele */
+    transition: all 0.3s ease;
+    cursor: default; /* Caso queira transformar em link depois, troque para 'pointer' */
+}
+
+/* Efeito de Aura (Nen) ao passar o mouse - Jajanken! */
+.header div:hover {
+    color: #ff5a00; /* O texto muda para o laranja dos detalhes */
+    text-shadow: 0 0 15px rgba(255, 90, 0, 0.8); /* Brilho simulando a concentração de aura no punho */
+    transform: scale(1.05);
+}
